@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSCode Club</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #22d3ee;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 140px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #22d3ee;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #22d3ee;
+      color: black;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #334155;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><b>OSCode Club</b></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>OSCode Club</h1>
+  <p>Learn. Build. Innovate together.</p>
+  <button class="btn primary" onclick="scrollToSection('events')">Explore Events</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    OSCode Club is a student-driven tech community focused on coding,
+    development, and innovation through workshops and projects.
+  </p>
+
+  <div class="grid">
+    <div class="card">500+ Members</div>
+    <div class="card">30+ Events</div>
+    <div class="card">Workshops & Hackathons</div>
+    <div class="card">24/7 Community</div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2>Team</h2>
+  <div class="grid">
+    <div class="card">Aarav - President</div>
+    <div class="card">Priya - UI/UX Lead</div>
+    <div class="card">Rohan - Backend Dev</div>
+    <div class="card">Sneha - Coordinator</div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <h2>Upcoming Events</h2>
+
+  <div class="card">
+    <h3>Web Dev Bootcamp</h3>
+    <p>Learn HTML, CSS, JS, React basics.</p>
+  </div>
+
+  <div class="card">
+    <h3>AI Workshop</h3>
+    <p>Intro to Machine Learning and AI tools.</p>
+  </div>
+
+  <div class="card">
+    <h3>Hackathon</h3>
+    <p>Build real projects in 24 hours.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <input type="text" placeholder="Your Name" />
+  <input type="email" placeholder="Your Email" />
+  <textarea rows="5" placeholder="Message"></textarea>
+  <button class="btn primary">Send</button>
+</section>
+
+<footer>
+  © 2026 OSCode Club
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
